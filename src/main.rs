@@ -1,3 +1,8 @@
+mod parser;
+mod err;
+
 fn main() {
-    println!("Hello, world!");
+    let src = String::from("hello \n world\nfrom\nsome\nfile");
+    let result = parser::parse_from_string(src).unwrap();
+    println!("Hello, world! {:?}", result.first());
 }
