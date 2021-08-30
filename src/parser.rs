@@ -1,14 +1,6 @@
 use crate::err::CKError;
+use crate::parser_base::Clipping;
 use std::result::Result;
-
-#[derive(Debug)]
-pub struct Clipping {
-	title: String,
-	content: String,
-	page_at: String,
-	book_id: String,
-	created_at: String,
-}
 
 const lang_en_checker: &str = "Your Highlight on";
 const lang_zh_checker: &str = "您在";
