@@ -17,8 +17,6 @@ pub fn parse_from_string(src: String) -> Result<Vec<Clipping>, CKError> {
 		return Err(CKError::new("hello"))
 	}
 
-
-
 	let mut cursor:Vec<&str> = Vec::new();
 	for l in plain_lines {
 		let line = l.trim();
@@ -34,13 +32,5 @@ pub fn parse_from_string(src: String) -> Result<Vec<Clipping>, CKError> {
 	}
 
     let mut result: Vec<Clipping> = Vec::new();
-    let c = Clipping {
-        title: String::from("s: &sr"),
-        content: String::from("s: &sr"),
-        page_at: String::from("s: &sr"),
-        book_id: String::from("s: &sr"),
-        created_at: String::from("s: &sr"),
-    };
-    result.push(c);
     Ok(result)
 }
